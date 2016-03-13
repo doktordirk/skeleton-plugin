@@ -1,4 +1,4 @@
-import {configure} from '../../src/index';
+import {configure} from '../../src/aurelia-skeleton-plugin';
 
 class ConfigStub {
   globalResources(...resources) {
@@ -7,7 +7,7 @@ class ConfigStub {
 }
 
 describe('the Aurelia configuration', () => {
-  var mockedConfiguration;
+  let mockedConfiguration;
 
   beforeEach(() => {
     mockedConfiguration = new ConfigStub();
@@ -17,5 +17,4 @@ describe('the Aurelia configuration', () => {
   it('should register a global resource', () => {
     expect(mockedConfiguration.resources).toContain('./hello-world');
   });
-
 });
